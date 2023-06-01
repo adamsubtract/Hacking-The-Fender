@@ -128,3 +128,4 @@ with open("new_passwords.csv", 'w') as new_passwords_obj:
     # We’ll take care of moving the new passwords file over the old one
     # in case you want to practice hacking The Fender in the future.
     # Thank you for your service, programmer.
+
