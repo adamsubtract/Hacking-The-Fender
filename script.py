@@ -86,3 +86,45 @@ with open("boss_message.json", 'w') as boss_message:
 
     json.dump(boss_message_dict, boss_message)
 
+
+# 16.
+# Now that we’ve safely recovered the compromised users we’ll want to remove the "passwords.csv" file completely.
+# Create a new with block and open "new_passwords.csv" in write-mode.
+# Save the file object to a variable called new_passwords_obj.
+
+with open("new_passwords.csv", 'w') as new_passwords_obj:
+
+    # 17.
+    # Enemy of the people, Slash Null, is who we want The Fender to think was behind this attack.
+    # He has a signature, whenever he hacks someone he adds this signature to one of the files he touches.
+    # Here is the signature:
+
+    slash_null_sig = """ 
+ _  _     ___   __  ____             
+/ )( \   / __) /  \(_  _)            
+) \/ (  ( (_ \(  O ) )(              
+\____/   \___/ \__/ (__)             
+ _  _   __    ___  __ _  ____  ____  
+/ )( \ / _\  / __)(  / )(  __)(    \ 
+) __ (/    \( (__  )  (  ) _)  ) D ( 
+\_)(_/\_/\_/ \___)(__\_)(____)(____/ 
+        ____  __     __   ____  _  _ 
+ ___   / ___)(  )   / _\ / ___)/ )( \\
+(___)  \___ \/ (_/\/    \\\\___ \) __ (
+       (____/\____/\_/\_/(____/\_)(_/
+ __ _  _  _  __    __                
+(  ( \/ )( \(  )  (  )               
+/    /) \/ (/ (_/\/ (_/\             
+\_)__)\____/\____/\____/
+"""
+
+    # 18.
+    # Write slash_null_sig to new_passwords_obj. Now we have the file to replace passwords.csv with!
+
+    new_passwords_obj.write(slash_null_sig)
+
+    # 19.
+    # What an incredible success!
+    # We’ll take care of moving the new passwords file over the old one
+    # in case you want to practice hacking The Fender in the future.
+    # Thank you for your service, programmer.
